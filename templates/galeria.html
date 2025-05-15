@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Galeria Romântica</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <!-- Link para CSS na pasta static -->
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Galeria Romântica</h1>
+  </header>
+
+  <section class="upload-container" aria-label="Formulário para adicionar fotos">
+    <input type="text" id="linkInput" placeholder="Coloque o link da imagem (opcional)" aria-label="Link da imagem"/>
+    <input type="file" id="fileInput" accept="image/*" aria-label="Selecionar arquivo de imagem"/>
+    <input type="text" id="legendaInput" placeholder="Legenda da foto" aria-label="Legenda da imagem"/>
+    
+    <select id="estiloInput" title="Escolha o estilo da imagem" aria-label="Estilo da imagem">
+      <option value="normal">Normal</option>
+      <option value="pretoebranco">Preto & Branco</option>
+      <option value="sepia">Sépia</option>
+    </select>
+
+    <select id="molduraInput" title="Escolha a moldura da imagem" aria-label="Moldura da imagem">
+      <option value="quadrada">Quadrada</option>
+      <option value="arredondada">Arredondada</option>
+      <option value="coracao">Coração</option>
+    </select>
+
+    <button type="button" onclick="adicionarImagem()">Adicionar Foto</button>
+  </section>
+
+  <main>
+    <div class="grid" aria-live="polite" aria-label="Galeria de fotos"></div>
+  </main>
+
+  <footer>
+    <p>Feito com ❤️ para você</p>
+  </footer>
+
+  <script src="/static/galeria.js"></script>
+</body>
+</html>

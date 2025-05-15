@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  background-color: #0d0d1a;
+  color: white;
+  overflow-x: hidden;
+}
+
+.stars {
+  background: black url('https://i.imgur.com/NnR5GDO.png') repeat;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  animation: moveStars 200s linear infinite;
+}
+
+@keyframes moveStars {
+  from { background-position: 0 0; }
+  to { background-position: -10000px 5000px; }
+}
+
+header {
+  width: 100%;
+  padding: 20px 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.5rem;
+  color: white;
+  font-family: 'Dancing Script', cursive;
+}
+
+nav a {
+  margin-left: 25px;
+  color: #ccc;
+  text-decoration: none;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: 0.3s ease;
+}
+
+nav a:hover {
+  color: white;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 40px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #f0f0f0;
+  margin-bottom: 20px;
+  font-family: 'Dancing Script', cursive;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #ccc;
+  max-width: 600px;
+  margin-bottom: 30px;
+}
+
+.music-embed {
+  margin-top: 30px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 15px;
+  width: 320px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.upload-box {
+  padding: 140px 40px 40px;
+  text-align: center;
+}
+
+.upload-box form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.upload-box input, .upload-box button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.upload-box button {
+  background: #ff66cc;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.upload-box button:hover {
+  background: #e055b0;
+}
+
+.galeria {
+  padding: 120px 40px 60px;
+  text-align: center;
+}
+
+.galeria h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.foto img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+.foto p {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  color: #ccc;
+}

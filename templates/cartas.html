@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galeria Sofisticada</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header>
+    <h1>📸 Nossa Galeria</h1>
+    <div class="upload-container">
+      <label class="upload-label">
+        <input type="file" id="uploadInput" accept="image/*">
+        Escolher imagem
+      </label>
+      <input type="text" id="legendaInput" placeholder="Legenda opcional...">
+      <button onclick="enviarImagem()">Salvar</button>
+    </div>
+  </header>
+
+  <main class="grid" id="galeria"></main>
+
+  <template id="foto-template">
+    <div class="card">
+      <img class="preview" />
+      <div class="overlay">
+        <p class="legenda"></p>
+        <div class="botoes">
+          <button onclick="editarLegenda(this)">🖊️</button>
+          <button onclick="deletarFoto(this)">🗑️</button>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <script src="/static/galeria.js"></script>
+</body>
+</html>

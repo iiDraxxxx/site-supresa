@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Menu Inicial - Site Romântico</title>
+  <link href="https://unpkg.com/lucide@latest" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #fce7f3, #f8bbd0);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 40px 20px;
+      color: #5a2a57;
+    }
+
+    header {
+      margin-bottom: 50px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-shadow: 1px 1px 3px rgba(90, 42, 87, 0.2);
+    }
+
+    header p {
+      font-size: 1.2rem;
+      font-style: italic;
+      color: #814c70;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    nav {
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 600px;
+      width: 100%;
+    }
+
+    nav a {
+      background: white;
+      color: #d63384;
+      text-decoration: none;
+      padding: 20px 28px;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 5px 15px rgba(214, 51, 132, 0.3);
+      transition: background-color 0.3s ease, color 0.3s ease;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    nav a:hover {
+      background-color: #d63384;
+      color: white;
+      box-shadow: 0 8px 20px rgba(214, 51, 132, 0.6);
+    }
+
+    nav a i {
+      stroke-width: 2.5;
+    }
+
+    footer {
+      margin-top: auto;
+      font-size: 0.9rem;
+      color: #814c70aa;
+      padding: 20px;
+      text-align: center;
+    }
+
+    @media (max-width: 480px) {
+      nav a {
+        font-size: 1rem;
+        padding: 16px 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Bem-vindo(a) ao Nosso Site</h1>
+    <p>Um lugar especial para compartilhar mensagens e cartas cheias de amor e carinho.</p>
+  </header>
+
+  <nav>
+    <a href="cartas.html" title="Veja as cartas">
+      <i data-lucide="mail"></i> Cartas de Amor
+    </a>
+    <a href="galeria.html" title="Veja a galeria de fotos">
+      <i data-lucide="image"></i> Galeria
+    </a>
+    <a href="sobre.html" title="Saiba mais sobre nós">
+      <i data-lucide="user"></i> Sobre
+    </a>
+    <a href="contato.html" title="Entre em contato">
+      <i data-lucide="mail-open"></i> Contato
+    </a>
+  </nav>
+
+  <footer>
+    &copy; 2025 - Criado com carinho para ela 💜
+  </footer>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
